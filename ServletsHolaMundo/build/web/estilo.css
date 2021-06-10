@@ -1,0 +1,83 @@
+body{
+	font-family: 'Karantina', cursive;
+	background: #FCD7AD;
+    margin: 0;
+}
+
+.menu{
+	list-style: none;
+	padding: 0;
+	background: #296b97;
+	margin: 0;
+	font-family: 'Karantina', cursive;
+	text-align: center;
+}
+
+.menu li a{
+	
+	text-decoration: none;
+	color: white;
+	padding: 20px;
+	padding-right: none;
+	display: block;
+	text-align: center;
+    width: 90%;
+}
+
+.menu li{
+	display: inline-block;
+	text-align: center;
+    width: 19.7%;
+   
+}
+
+
+.menu li a:hover{
+	background: #ef8354;
+   
+}
+
+.boton{
+	
+	
+	color: #040505 !important;
+	font-size: 13px;
+	font-weight: 500;
+	padding: 10;
+	background: rgba(0,0,0,0);
+	background: #f1a07d;
+
+	transition: all 1s ease;
+	position: relative;
+	font-family: 'Karantina', cursive;
+	  
+	  
+}
+.boton:hover {
+	background: #4c93c2;
+	color: #fff !important;
+}
+
+.boton2{
+	font-family: 'Karantina', cursive;
+	background: #ef8354;
+	transition: all 1s ease;
+	position: relative;
+}
+
+.boton2:hover {
+	background: #296b97;
+	color: #fff !important;
+}
+div{
+    float: center;
+    align-items: center;
+    word-break:break-all;
+    margin-left: 24rem;
+    margin-right: 24rem;
+}
+
+.bienvenida{
+  margin-left: 24rem;
+    margin-right: 24rem;  
+}

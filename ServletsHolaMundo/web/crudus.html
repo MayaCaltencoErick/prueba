@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Crud</title>
+    <script type="text/JavaScript"
+    src="validar4.js"></script>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="index.html">Usuarios</a></li>
+        <li><a href="crudpromo.html">Promociones</a></li>
+        <li><a href="crudproductos.html">Productos</a></li>
+        
+    </ul>
+    <h1 class="bienvenida">Crud usuarios</h1>
+    <div class="container" >
+        <form name="formulario" method="post"  
+              action="Registro" onsubmit="return validar(this)">
+              
+            <label>Nombre:</label>
+            <input type="text" name="nombre"  >
+            <br>
+            <label>Apellido Paterno:</label>
+            <input type="text" name="appat"  >
+            <br>
+            <label>Apellido Materno:</label>
+            <input type="text" name="appmat"  >
+            <br>
+            <label>Edad:</label>
+            <input type="number" name="edad" min="01" max="99" 
+                   size="2"  >
+            <br>
+            <label>Correo:</label>
+            <input type="email" name="email"  >
+            <br>
+            <select name="permiso">
+            <option value ="usuario">Usuario</option>
+            <option value ="administrador">Administrador</option>
+            </select>
+            <br>
+            <input type="submit" value="Enviar Datos de Registro" class="boton">
+            <input type="reset" value="Borrar Registro" class="boton">
+        </form>
+    </div>
+    
+    <br>
+    <div class="contendorConsultar">
+        <br>
+        <form method="get" name="formularioconsultar" action="Consultar">
+            <input type="submit" value="Consultar Tabla General de Usuarios" class="boton2" >
+        </form>
+    </div>
+    <br>
+    <div class="contenedorEliminar" >
+        <br>
+        <form method="post" name="formularioeliminar" action="Eliminar" onsubmit="return validareliminacion(this)">
+            <label>Ingresa el ID del usuario que deseas eliminar</label>
+            <input type="text" name="ideliminar" >
+            <input type="submit" value="Eliminar Usuario" class="boton" >
+        </form>
+    </div>
+   
+    <br>
+    <div class="contenedorActualizar" >
+        <h1>Actualizar todos los campos</h1>
+        <form name="formularioactualizar" method="post"  
+              action="Actualizar" onsubmit="return validaractualizacion(this)">
+            <label>Ingresa el ID del usuario que deseas actualizar</label>
+            <input type="text" name="idactualizar" >
+            <br>
+            <label>Nombre:</label>
+            <input type="text" name="nombreactualizar"  >
+            <br>
+            <label>Apellido Paterno:</label>
+            <input type="text" name="appatactualizar"  >
+            <br>
+            <label>Apellido Materno:</label>
+            <input type="text" name="appmatactualizar"  >
+            <br>
+            <label>Edad:</label>
+            <input type="number" name="edadactualizar" min="01" max="99" 
+                   size="2"  >
+            <br>
+            <label>Correo:</label>
+            <input type="email" name="emailactualizar"  >
+            <br>
+            <select name="permiso">
+                <option value ="usuario">Usuario</option>
+                <option value ="administrador">Administrador</option>
+            </select>
+            <br>
+            <input type="submit" value="Enviar Datos de Registro" class="boton">
+            <input type="reset" value="Borrar Registro" class="boton">
+        </form>
+    </div>
+<div class="contenedorActualizar2" >
+        <h1>Actualizar un campo</h1>
+        <form name="formularioactualizar" method="post"  
+              action="ActualizarPartes" onsubmit="return validarpartes(this)">
+            <label>Ingresa el ID del usuario que deseas actualizar</label>
+            <input type="text" name="idactualizar2" >
+            <br>
+            <label>Seleccione el campo que quiere actualizar:</label>
+            <select name="campoActualizar">
+            <option value ="nom_usu">Nombre</option>
+            <option value ="appat_usu">Apellido pat.</option>
+            <option value ="apmat_usu">Apellido mat.</option>
+            <option value ="edad_usu">Edad</option>
+            <option value ="email_usu">Coreo elec.</option>
+            <option value ="permiso_usu">Permiso</option>
+            </select>
+            <br>
+            <label>Ingresa el nuevo valor del campo</label>
+            <input type="text" name="valorActualizar" >
+            <br>
+            <input type="submit" value="Enviar Datos de Registro" class="boton">
+            <input type="reset" value="Borrar Registro" class="boton">
+        </form>
+    </div>
+    <footer>
+        <h4>
+            Realizado por: Maya Caltenco Erick Sebastian, Moctezuma Martínez Diego y Rebollar Aguilar Jesús Adair
+        </h4>
+    </footer>
+</body>
+
+    
+</html>

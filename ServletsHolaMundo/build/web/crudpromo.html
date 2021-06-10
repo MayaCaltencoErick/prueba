@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Crud</title>
+    <script type="text/JavaScript"
+    src="validar2.js"></script>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="crudus.html">Usuarios</a></li>
+        <li><a href="crudpromo.html">Promociones</a></li>
+        <li><a href="crudproductos.html">Productos</a></li>
+        
+        
+    </ul>
+    <h1 class="bienvenida">Crud Promociones</h1>
+    <div class="container" >
+        <form name="formulario" method="post"  
+              action="RegistroPromociones" onsubmit="return validar(this)">
+            <label>Nombre de promoción:</label>
+            <input type="text" name="nombre"  >
+            <br>
+            <label>Fecha de inicio:</label>
+            <input type="text" name="Fecha"  >
+            <br>
+            <label>Fecha de Fin:</label>
+            <input type="text" name="Fecha2"  >
+            <br>
+            <input type="submit" value="Enviar Datos de Registro" class="boton">
+            <input type="reset" value="Borrar Registro" class="boton">
+        </form>
+    </div>
+    <br>
+    <div class="contendorConsultar">
+        <br>
+        <form method="get" name="formularioconsultar" action="ConsultarPromociones">
+            <input type="submit" value="Consultar Tabla General de Promociones" class="boton2" >
+        </form>
+    </div>
+    <br>
+    <div class="contenedorEliminar" >
+        <br>
+        <form method="post" name="formularioeliminar" action="EliminarPromociones" onsubmit="return validareliminacion(this)">
+            <label>Ingresa el ID de la promoción que deseas eliminar</label>
+            <input type="text" name="ideliminar" >
+            <input type="submit" value="Eliminar Promocion" class="boton" >
+        </form>
+    </div>
+    <br>
+    <div class="contenedorActualizar" >
+        <h1>Actualizar todos los campos</h1>
+        <form name="formularioactualizar" method="post"  
+              action="ActualizarPromociones" onsubmit="return validaractualizacion(this)">
+            <label>Ingresa el ID de la promocion que deseas actualizar</label>
+            <input type="text" name="idactualizar" >
+            <br>
+            <label>Nombre de promoción:</label>
+            <input type="text" name="nombre"  >
+            <br>
+            <label>Fecha de inicio:</label>
+            <input type="text" name="Fecha"  >
+            <br>
+            <label>Fecha de Fin:</label>
+            <input type="text" name="Fecha2"  >
+            <br>
+            <input type="submit" value="Enviar Datos de Registro" class="boton">
+            <input type="reset" value="Borrar Registro" class="boton">
+        </form>
+    </div>
+<div class="contenedorActualizar2" >
+        <h1>Actualizar un campo</h1>
+        <form name="formularioactualizar" method="post"  
+              action="ActualizarPartesPromociones" onsubmit="return validarpartes(this)">
+            <label>Ingresa el ID de la promoción que desea actualizar</label>
+            <input type="text" name="idactualizar2" >
+            <br>
+            <label>Seleccione el campo que quiere actualizar:</label>
+            <select name="campoActualizar">
+            <option value ="nom_pro">Nombre</option>
+            <option value ="fechai_pro">Fecha de Inicio</option>
+            <option value ="fechaf_pro">Fecha de Fin</option>
+            
+            </select>
+            <br>
+            <label>Ingresa el nuevo valor del campo</label>
+            <input type="text" name="valorActualizar" >
+            <br>
+            <input type="submit" value="Enviar Datos de Registro" class="boton">
+            <input type="reset" value="Borrar Registro" class="boton">
+        </form>
+    </div>
+<footer>
+        <h4>
+            Realizado por: Maya Caltenco Erick Sebastian, Moctezuma Martínez Diego y Rebollar Aguilar Jesús Adair
+        </h4>
+    </footer>
+</body>
+</html>

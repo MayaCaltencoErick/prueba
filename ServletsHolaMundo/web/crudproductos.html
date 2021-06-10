@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Crud</title>
+    <script type="text/JavaScript"
+    src="validar3.js"></script>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="crudus.html">Usuarios</a></li>
+        <li><a href="crudpromo.html">Promociones</a></li>
+        <li><a href="crudproductos.html">Productos</a></li>
+        
+    </ul>
+    <h1 class="bienvenida">Crud Productos</h1>
+    <div class="container" >
+        <form name="formulario" method="post"  
+              action="RegistroProductos" onsubmit="return validar(this)">
+            <label>Nombre:</label>
+            <input type="text" name="nombre"  >
+            <br>
+            <label>Precio cada 100 gramos:</label>
+            <input type="number" name="edad" min="01" max="99" 
+                   size="2"  >
+            
+            <br>
+            <input type="submit" value="Enviar Datos de Registro" class="boton">
+            <input type="reset" value="Borrar Registro" class="boton">
+        </form>
+    </div>
+    <br>
+    <div class="contendorConsultar">
+        <br>
+        <form method="get" name="formularioconsultar" action="ContultarProductos">
+            <input type="submit" value="Consultar Tabla General de Productos" class="boton2" >
+        </form>
+    </div>
+    <br>
+    <div class="contenedorEliminar" >
+        <br>
+        <form method="post" name="formularioeliminar" action="EliminarProductos" onsubmit="return validareliminacion(this)">
+            <label>Ingresa el ID del Producto que deseas eliminar</label>
+            <input type="text" name="ideliminar" >
+            <input type="submit" value="Eliminar Producto" class="boton" >
+        </form>
+    </div>
+    <br>
+    <div class="contenedorActualizar" >
+        <h1>Actualizar todos los campos</h1>
+        <form name="formularioactualizar" method="post"  
+              action="ActualizarProductos" onsubmit="return validaractualizacion(this)">
+            <label>Ingresa el ID del Producto que deseas actualizar</label>
+            <input type="text" name="idactualizar" >
+            <br>
+            <label>Nombre:</label>
+            <input type="text" name="nombreactualizar"  >
+            <br>
+            <label>Precio cada 100 gramos:</label>
+            <input type="number" name="edadactualizar" min="01" max="99" 
+                   size="2"  >
+            <br>
+            <input type="submit" value="Enviar Datos de Registro" class="boton">
+            <input type="reset" value="Borrar Registro" class="boton">
+        </form>
+    </div>
+<div class="contenedorActualizar2" >
+        <h1>Actualizar un campo</h1>
+        <form name="formularioactualizar" method="post"  
+              action="ActualizarPartesProductos" onsubmit="return validarpartes(this)">
+            <label>Ingresa el ID del usuario que deseas actualizar</label>
+            <input type="text" name="idactualizar2" >
+            <br>
+            <label>Seleccione el campo que quiere actualizar:</label>
+            <select name="campoActualizar">
+            <option value ="nom_pru">Nombre</option>
+            <option value ="pre_pru">Precio por 100 gramos.</option>
+            
+            </select>
+            <br>
+            <label>Ingresa el nuevo valor del campo</label>
+            <input type="text" name="valorActualizar" >
+            <br>
+            <input type="submit" value="Enviar Datos de Registro" class="boton">
+            <input type="reset" value="Borrar Registro" class="boton">
+        </form>
+    </div>
+<footer>
+        <h4>
+            Realizado por: Maya Caltenco Erick Sebastian, Moctezuma Martínez Diego y Rebollar Aguilar Jesús Adair
+        </h4>
+    </footer>
+</body>
+</html>
